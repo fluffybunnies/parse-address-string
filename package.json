@@ -1,0 +1,33 @@
+{
+	"name": "parse-address-string",
+	"version": "0.0.0",
+	"description": "Extract street, city, state, zip, and country components from single-line address string",
+	"keywords": [
+		"address",
+		"parser",
+		"extract",
+		"street",
+		"geo",
+		"us",
+		"canada"
+	],
+	"author": "fluffybunnies",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:fluffybunnies/parse-address-string.git"
+	},
+	"homepage": "https://github.com/fluffybunnies/parse-address-string",
+	"bugs": {
+		"url": "https://github.com/fluffybunnies/parse-address-string/issues"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "node test/test.js"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"tape": "4.6.3"
+	}
+}
