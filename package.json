@@ -1,6 +1,6 @@
 {
 	"name": "parse-address-string",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Extract street, city, state, zip, and country components from single-line address string",
 	"keywords": [
 		"address",
