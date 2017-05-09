@@ -48,8 +48,8 @@ function explodeAddress(singleLineAddress,cb){
 				return !addressObj.street_address1 && (addressObj.street_address1 = addyPart)
 			}
 			// if looks like state
-			if (looksLikeState(addyPart)) {
-				return !addressObj.state && (addressObj.state = addyPart)
+			if (looksLikeState(addyPart) && !addressObj.state) {
+				return addressObj.state = addyPart
 			}
 			// if looks like country
 			if (looksLikeCountry(addyPart)) {

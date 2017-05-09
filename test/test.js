@@ -26,6 +26,17 @@ test('explodeAddress',function(t){
 			}
 		}
 		,{
+			desc: 'state and city have the same name'
+			,input: '1201 Broadway, New York, New York 10001'
+			,expected: {
+				street_address1: '1201 Broadway'
+				,city: 'New York'
+				,state: 'New York'
+				,postal_code: '10001'
+				,country: null
+			}
+		}
+		,{
 			desc: 'state with two names spelled out'
 			,input: '306 Deep Creek Rd, Fayetteville, North Carolina 28312'
 			,expected: {
