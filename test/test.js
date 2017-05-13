@@ -26,6 +26,17 @@ test('explodeAddress',function(t){
 			}
 		}
 		,{
+			desc: 'street address is just words'
+			,input: 'Trousdale Parkway, Los Angeles, California'
+			,expected: {
+				street_address1: 'Trousdale Parkway'
+				,city: 'Los Angeles'
+				,state: 'California'
+				,postal_code: null
+				,country: null
+			}
+		}
+		,{
 			desc: 'state and city have the same name'
 			,input: '1201 Broadway, New York, New York 10001'
 			,expected: {

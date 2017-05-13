@@ -41,7 +41,19 @@ function explodeAddress(singleLineAddress,cb){
 			}
 		}
 
-		singleLineAddress.split(',').forEach(function(addyPart){
+		var addySplit = singleLineAddress.split(',')
+
+		// Handle special cases...
+		// Neighborhood, City, State
+		if (addySplit.length == 3 && looksLikeState(addySplit[2])) {
+			addressObj.street_address1 = addySplit[0].trim()
+			addressObj.city = addySplit[1].trim()
+			addressObj.state = addySplit[2].trim()
+			return cb(false,addressObj)
+		}
+
+		// Handle generic case...
+		addySplit.forEach(function(addyPart){
 			if (!(addyPart = addyPart.trim())) return
 			// if has numbers, assume street address
 			if (/[0-9]/.test(addyPart)) {

@@ -1,3 +1,11 @@
+## 0.0.3 (2017-05-12)
+
+Features
+
+	- Handle special case: Neighborhood, City, State
+
+
+
 ## 0.0.2 (2017-05-09)
 
 Bugs
