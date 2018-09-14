@@ -23,7 +23,7 @@ parseAddress('4296 W 7th St, Long Beach, CA 90802', function(err,addressObj){
 - This version currently targets US and Canada
 	- Many other North American and European countries follow the same standard, but are not explicitly supported in this build
 	- Updating `lib/*.json` would get you 90% of the way there
-- `explodeAddress` conflates Street1 and Street2 as it is economically difficult to parse with high enough consistency
+- `explodeAddress` conflates Street1 and Street2 as it is economically expensive to parse with high enough consistency
 	- Would require a dictionary of prefix terms ("apt", "ste", etc) with heuristics to ensure it wasn't part of Street1
 	- May add support for this in future versions
 - Async callback format is for interoperability with potential future versions of this module, or if you wanted to swap it out with (for example) a call directly to google maps api
